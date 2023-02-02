@@ -2,7 +2,7 @@ import { useState } from "react";
 //import Item from './Components/Item/Item'
 
 function App() {
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
 
   const changeState = () => {
     setToggle(!toggle);
@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-      {toggle && <h1>Le state est True</h1>}
+      <div className="box" style={{backgroundColor: toggle ? "salmon" : "lightgreen"}}></div>
       <button onClick={changeState}>Change state</button>
     </div>
   );
