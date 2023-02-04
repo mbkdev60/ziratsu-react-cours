@@ -1,17 +1,12 @@
-import { useState } from "react";
-//import Item from './Components/Item/Item'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import Form from './Components/Form';
 
 function App() {
-  const [toggle, setToggle] = useState(false);
-
-  const changeState = () => {
-    setToggle(!toggle);
-  };
-
+  
   return (
     <div className="App">
-      <div className="box" style={{backgroundColor: toggle ? "salmon" : "lightgreen"}}></div>
-      <button onClick={changeState}>Change state</button>
+      <h1 className="text-center mt-3">Todo List</h1>
+      <Form />
     </div>
   );
 }
